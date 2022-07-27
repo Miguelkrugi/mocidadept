@@ -19,7 +19,7 @@ public class Utilizador {
     @Column(name = "user_id") private int id;
     @Column(name = "user_name") private String username;
     @Column(name = "user_password") private String password;
-    @Column(name = "user_creation_date") private Date data;
+    @Column(name = "user_creation_date") private String data;
     @Column(name = "user_tipo_id") private int role;
     
 
@@ -53,11 +53,11 @@ public class Utilizador {
         this.password = password;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
