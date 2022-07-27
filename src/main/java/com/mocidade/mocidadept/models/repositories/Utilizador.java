@@ -19,9 +19,9 @@ public class Utilizador {
     @Column(name = "user_id") private int id;
     @Column(name = "user_name") private String username;
     @Column(name = "user_password") private String password;
-    @Column(name = "user_moderador") private boolean moderador;
-    @Column(name = "user_administrador") private boolean administrador;
     @Column(name = "user_creation_date") private Date data;
+    @Column(name = "user_tipo_id") private int role;
+    
 
     public Utilizador(){
 
@@ -61,20 +61,12 @@ public class Utilizador {
         this.data = data;
     }
 
-    public boolean isAdministrador() {
-        return administrador;
+    public int getRole() {
+        return role;
     }
 
-    public void setAdministrador(boolean administrador) {
-        this.administrador = administrador;
-    }
-
-    public boolean isModerador() {
-        return moderador;
-    }
-
-    public void setModerador(boolean moderador) {
-        this.moderador = moderador;
+    public void setRole(int role) {
+        this.role = role;
     }
     
 }
